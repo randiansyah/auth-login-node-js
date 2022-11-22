@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "67599756-bfe9-43e5-9937-448f1b6cb77e",
+		"name": "BQRESTfull",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN WEB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "32a5dc0b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_or_email",
+									"value": "dono1231@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dono123@",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/web/login",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"web",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN MOBILE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "32a5dc0b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_or_email",
+									"value": "indrkmna@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sample123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}auth/mobile/login",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"mobile",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "9e3597af660aa50dc6a1b879f7950a7a3300868f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}auth/logout",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "32a5dc0b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_or_email",
+									"value": "ratsgamming31@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}auth/register",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OTP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "32a5dc0b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "otp",
+									"value": "123198238123",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}auth/otp",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "32a5dc0b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jojon",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "230984293",
+									"type": "text"
+								},
+								{
+									"key": "type_value",
+									"value": "jojon@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "jojon123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}auth/create_account",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"create_account"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "LIST USERS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "3d453e1221355eb4bbf02358d808d2c47724efa5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/users/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE USERS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c9eb3b1a-d40e-4363-8c09-319e6417e731",
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"_csrf=\"); postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "3d453e1221355eb4bbf02358d808d2c47724efa5",
+								"type": "text"
+							},
+							{
+								"key": "_csrf",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"dono\",\r\n    \"phone\": \"1234567891012\",\r\n    \"email\": \"dono1231@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"password\": \"dono123@\",\r\n    \"date_of_birth\": \"1997-06-21\",\r\n    \"code_refferal\": \"DONO123\",\r\n    \"created_on\": \"1231239812\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/users/create",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY USERS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2163648d0f20e871a7b8ab22521a2c719e47d4e5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/users/getby/2",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"users",
+								"getby",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
